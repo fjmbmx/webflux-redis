@@ -19,7 +19,7 @@ public class UserRedisServiceImpl implements UserRedisService {
 
     @Override
     @Cacheable(cacheNames = "my-redis-cache1",keyGenerator = "customKeyGenerator") // Use el tiempo de vencimiento 1, prueba OK
-    public List<User> getUser(String username,  PageRequest pageRequest) {
+    public List<User> getUser(String username) {
         log.info ("Ingrese la clase de implementación para obtener datos: {}" +username);
         Random random = new Random();
 
